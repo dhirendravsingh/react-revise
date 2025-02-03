@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [counter, setCounter] = useState(false)
+  const [counter, setCounter] = useState(10)
   return (
     <>
      <div>The current value is {counter}</div>
@@ -12,7 +12,7 @@ function App() {
      <button onClick={()=> {setCounter(counter+1)} }>Add Value</button>
      <br/> <br/>
 
-     <button onClick={()=>{setCounter(counter-1)}}>Decrease</button>
+     <button onClick={()=>{(counter===0)? counter: setCounter(counter-1)}}>Decrease</button>
     </>
   )
 }
